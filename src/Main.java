@@ -38,8 +38,8 @@ public class Main {
             else return String.valueOf(c);
         }
         else { // вычисление выражения с римскими числами
-            int a = romToAr(expr1[0]);
-            int b = romToAr(expr1[2]);
+            int a = romToAr(expr1[0]); // конвертируем римск. в integer
+            int b = romToAr(expr1[2]); // конвертируем римск. в integer
             if (a<1||b<1) return "Исключение"; // проверка диапазона введённых чисел
             if (b>=a && Objects.equals(expr1[1], "-")) return "Исключение"; // проверка на положительный результат при вычитании
             int c = 101; // индикатор некорректного знака операции
