@@ -22,7 +22,7 @@ public class Main {
         if (!rom){
             int a = Integer.parseInt(expr1[0]);
             int b = Integer.parseInt(expr1[2]);
-            int c = 21;
+            int c = 101;
             if (a<1||a>10||b<1||b>10) return "Исключение";
             if (Objects.equals(expr1[1], "+")) c = a + b;
             else {
@@ -34,7 +34,7 @@ public class Main {
                     }
                 }
             }
-            if (c==21) return "Исключение";
+            if (c==101) return "Исключение";
             else return String.valueOf(c);
         }
         else {
@@ -42,7 +42,7 @@ public class Main {
             int b = romToAr(expr1[2]);
             if (a<1||b<1) return "Исключение";
             if (b>=a && Objects.equals(expr1[1], "-")) return "Исключение";
-            int c = 21;
+            int c = 101;
             if (Objects.equals(expr1[1], "+")) c = a + b;
             else {
                 if (Objects.equals(expr1[1], "-")) c = a - b;
@@ -53,7 +53,7 @@ public class Main {
                     }
                 }
             }
-            if (c == 21||c == 0) return "Исключение";
+            if (c == 101||c == 0) return "Исключение";
             else return arToRom(c);
         }
     }
