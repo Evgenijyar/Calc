@@ -12,7 +12,7 @@ public class Main {
         if (s.contains(".")||s.contains(",")) return "Исключение"; // проверка целочисленности
         String [] expr1 = s.split(" ");
         if (expr1.length<3) return "Исключение"; // проверка наличия пробелов
-        if (expr1[0].contains("I")||expr1[0].contains("V")||expr1[0].contains("X")) { // определение системы счисления
+        if (expr1[0].contains("I")||expr1[0].contains("V")||expr1[0].contains("X")) { // определение системы счисления первого числа
             rom = true; // если первое число римск. - переключаем флаг на римск. систему
             if (!expr1[2].contains("I")&&!expr1[2].contains("V")&&!expr1[2].contains("X")) return "Исключение"; // если первое число римск., а второе арабск.
         }
